@@ -5,7 +5,7 @@
      COURSE: "aws with Devops"  #string
      DURATION: 120  # number
      IS_LIVE: true  #boolean
-     TOOLS:  #list
+     TOOLS:  #list defined 
      - linux
      - shell
      - ansible
