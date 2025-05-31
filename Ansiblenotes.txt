@@ -1,0 +1,40 @@
+syntax for Ansible
+- name: hello
+  hosts: local # either remote or local we need to specify for any script
+  connections: local
+  tasks:
+  - name: prining hello world
+    ansible.builtin.debug:
+	 msg: "hello world"
+
+For every program
+name
+hosts
+connections
+tasks
+every task has builin modules will be there in ansible
+
+become: yes  # sudo access to be provided for remote servers, for local no user name and password is requried
+
+to run ansbile commands we need to install the ansible modules
+ansible all -i <ipaddress>, -e ansible_user=ec2-user -e ansible_password=DevOps321 -m ping
+
+-->ansible conecting the remote serer and checking ping
+
+---> nginx instllation
+ansible all -i <ipaddress>, -e ansible_user=ec2-user -e ansible_password=DevOps321 -b -m dnf -a "name=nginx state=installed"
+-b providing sudo access to user
+
+ansible all -i <ipaddress>, -e ansible_user=ec2-user -e ansible_password=DevOps321 -b -m service -a "name=nginx state=started"
+
+inventory.ini
+[frontend]
+172.31.23.45
+123.44.34.45
+
+anible-playbook -i inventiory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 hell.yaml
+
+
+
+
+
