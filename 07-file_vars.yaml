@@ -1,8 +1,8 @@
 - name: file level variables
   hosts: local
   connection: local
-    vars_files:
-    - Course.yaml
+  vars_files:
+  - Course.yaml
   tasks:
    - name: print course inforamtion
      ansible.builtin.debug:
