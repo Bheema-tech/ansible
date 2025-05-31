@@ -10,5 +10,5 @@
      private: true  
   tasks:
   - name: print course inforamtion
-     ansible.builtin.debug:
+    ansible.builtin.debug:
        msg: "Variables username :{{ USERNAME }} password:{{ PASSWORD}}"
