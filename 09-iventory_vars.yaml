@@ -1,4 +1,4 @@
-- name: prompt level variables
+- name: inventory level variables
   hosts: local
   connection: local
   tasks:
