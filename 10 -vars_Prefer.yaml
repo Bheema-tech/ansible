@@ -5,10 +5,10 @@
     GREETING: Hello worlds varriables from Play level
   # vars_files:
   # - Course.yaml
-  vars_prompt:
-     name: GREETING
-     prompt: enter the mesage for world
-     private: true
+  # vars_prompt:
+  #    name: GREETING
+  #    prompt: enter the mesage for world
+  #    private: true
   
   tasks:
   - name: print hello world
@@ -20,4 +20,7 @@
 # command line or args -- 1st preference
 # tasks 2nd preference
 # file is 3rd preference
-#
+# 4th Place prompt
+#5th preference play level varrables
+
+
