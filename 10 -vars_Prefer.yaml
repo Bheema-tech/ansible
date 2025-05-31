@@ -12,8 +12,10 @@
   
   tasks:
   - name: print hello world
-    vars:
-      GREETING: Hello worlds varriables from Play task level
+    # vars:
+    #   GREETING: Hello worlds varriables from Play task level
     ansible.builtin.debug:
        msg: "Greetings to {{ GREETING }}"
   
+# command line or args -- 1st preference
+# tasks 2nd preference
