@@ -1,0 +1,22 @@
+- name: shellvscommand
+  hosts: frontend
+  tasks:
+  - name: rediret output a file
+    # ansible.builtin.command: "ls-ltr > /tmp/outpu.txt"  # redirection will not work in command module
+    ansible.builtin.shell: "ls-ltr > /tmp/outpu.txt"
+    register: command_output
+
+  - name: print the output of the command
+    ansible.builtin.debug:
+       msg: "{{ command_output }}"
+  
+- name: rediret output in command module
+  ansible.builtin.command: "ls-ltr"  # redirection will not work in command module
+  register: command_outputvalue
+
+- name: print the output of the command
+  ansible.builtin.debug:
+      msg: "{{ command_outputvalue }}"
+  
+
+  
