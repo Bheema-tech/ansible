@@ -5,13 +5,14 @@
     ansible.builtin.dnf:
      name: nginx
      state: present
+    when: ansible_os_family == "RedHat"
     ansible.builtin.debug:
        msg: "ngix installed on the server"
-    when: ansible_os_family == "RedHat"
-  
+
   - name: ngix installation on Debian
     ansible.builtin.apt:
       name: nginx
       state: present
-    ansible.builtin.debug:
     when: ansible_os_family == "Debian"
+    ansible.builtin.debug:
+       msg: "ngix installed on debian server"
