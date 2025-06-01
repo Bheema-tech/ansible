@@ -10,7 +10,7 @@ syntax for Ansible
 For every program
 name
 hosts
-connections
+connection
 tasks
 every task has builin modules will be there in ansible
 
@@ -32,8 +32,53 @@ inventory.ini
 172.31.23.45
 123.44.34.45
 
-anible-playbook -i inventiory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 hell.yaml
+ansible-playbook -i inventiory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 hell.yaml
+ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 01-playbook.yaml
 
+for local computer
+
+we need to specify local  in ini file
+
+ansible-playbook -i inventory.ini 01-playbook.yaml
+
+what are ansible adhoc commands?
+
+it is ansible command line to perform one time task or emergency tasks when you dont have write a playbook and push
+
+
+what are ansible playbook
+
+Playbook contains list of plays we can excute against group of remote serer to perform multiple taks. play book is in YAML format
+
+dnf install nginx -y --- redhat
+apt install nginx -y ---> ubuntu
+
+inheritance
+=============
+great grand father --> 1000 acres --> grand father --> 100 acres (father) --> father 10 acres --> son 1 acre --> Our son 100 acres
+
+1. define same variable in all possible locations
+2. run the playbook
+3. comment when you understand the preference
+
+data types
+==============
+int, float, double, decimal, long, char, string, boolean, list, map, etc.
+
+Conditions
+==============
+when
+
+ -e "COURSE=DEVOPS" -e 
+ 
+ 1st prefernce -- commondline or args
+ 2nd prefrence ---task preference
+ 3rd preference --file preference
+ 4th perference -- prompt preference
+ 5th preferenae ---play level preference
+ 6th Prefernce --- inventory level 
+ 
+ 
 
 
 
