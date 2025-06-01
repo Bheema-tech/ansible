@@ -3,7 +3,7 @@
   connection: local
   tasks:
   - name: print names
-    ansible-builtin.debug:
+    ansible.builtin.debug:
        msg: "Name: {{ item }}"   #item is reserv word for ansible programming
     loop:
     - suresh
