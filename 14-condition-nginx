@@ -1,0 +1,17 @@
+- name: conditions on ansible_facts
+  hosts: frontend
+  tasks:
+  - name: ngix installation on RedHat
+    ansible.builtin.dnf:
+     name: nginx
+     state: present
+    ansible.builtin.debug:
+       msg: "ngix installed on the server"
+    when: ansible_os_family == "RedHat"
+  
+  - name: ngix installation on Debian
+    ansible.builtin.apt:
+      name: nginx
+      state: present
+    ansible.builtin.debug:
+    when: ansible_os_family == "Debian"
