@@ -1,5 +1,6 @@
 - name: conditions on ansible_facts
   hosts: frontend
+  become: yes
   tasks:
   - name: ngix installation on RedHat
     ansible.builtin.dnf:
